@@ -32,7 +32,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="img/night.jpg" class="js-avatar">
+			<img lazy-src="null" class="js-avatar">
 			
 		</a>
 
@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/linux/" style="font-size: 10px;">linux</a>
 					</div>
 				</section>
 				
@@ -164,7 +164,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="img/night.jpg" class="js-avatar">
+				<img lazy-src="null" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -202,6 +202,178 @@
 
       <div class="body-wrap">
   
+    <article id="post-基于Gradle的Maven项目添加第三方SDK并导入" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/03/基于Gradle的Maven项目添加第三方SDK并导入/" class="article-date">
+  	<time datetime="2016-11-03T11:51:56.000Z" itemprop="datePublished">2016-11-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/03/基于Gradle的Maven项目添加第三方SDK并导入/">基于Gradle的Maven项目添加第三方SDK并导入</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Spring Boot项目上添加支付宝SDK</p>
+<p>基于Gradle构建的Boot项目没有pom的xml配置信息，抛开手动的Ctrl+C Ctrl+V的菜鸟手法，就要明白如何让第三方SDK添加到本地的mvn仓库，在idea的Terminal下执行</p>
+<blockquote>
+<p>mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -Dversion=?(eg:1.0) -Dpackaging=?(eg:jar) -Dfile=?(D:.….\alipay.*.jar)</p>
+</blockquote>
+<p>这样就可以把mvn网络仓库没有的第三方SDK添加到本地仓库中，再在gradle依赖里面添加：</p>
+<blockquote>
+<p>compile：”alipay:alipay:1.0”</p>
+</blockquote>
+<p>再执行gradle.bat cleanIdea idea重新导入依赖就可以将SDK成功导入项目中。</p>
+<p>以上注意的有：mvn本地仓库一般在用户目录下的.m2/repository下，在导入本地仓库成功后可以确认一下本地仓库是否已经有了对应生成的目录结构：repository\DgroupId\DartifactId\version，目录下是否有DgroupId-version.Dpackaging文件以及pom文件还有_rermote.repositories。如果存在则导入成功。再根据以上目录结构再在gradle里添加compile依赖。compile:”DgroupId:DartifactId:version”。以上即可成功导入。注意导入的SDK是编译好后的SDK，也就是.class文件，并非源码。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Linux下的nginx的自定义脚本以及自启动" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/02/Linux下的nginx的自定义脚本以及自启动/" class="article-date">
+  	<time datetime="2016-11-02T09:08:07.000Z" itemprop="datePublished">2016-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/02/Linux下的nginx的自定义脚本以及自启动/">Linux下的nginx的自定义脚本以及自启动</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>```java<br>public class test(){}</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-test-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/02/test-1/" class="article-date">
+  	<time datetime="2016-11-02T09:03:04.000Z" itemprop="datePublished">2016-11-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/02/test-1/">test</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -228,8 +400,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> this is a test.</p>
-
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="meta">@interface</span> exm &#123;&#125;</div></pre></td></tr></table></figure>
+<p> this is a test.</p>
+ <!-- <meta http-equiv="refresh" content="2"> -->
       
     </div>
     
