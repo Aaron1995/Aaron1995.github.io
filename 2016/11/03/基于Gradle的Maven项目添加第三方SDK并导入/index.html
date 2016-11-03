@@ -18,7 +18,7 @@ mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -D">
 基于Gradle构建的Boot项目没有pom的xml配置信息，抛开手动的Ctrl+C Ctrl+V的菜鸟手法，就要明白如何让第三方SDK添加到本地的mvn仓库，在idea的Terminal下执行
 
 mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -D">
-<meta property="og:updated_time" content="2016-11-03T12:08:14.016Z">
+<meta property="og:updated_time" content="2016-11-03T12:15:03.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Gradle的Maven项目添加第三方SDK并导入">
 <meta name="twitter:description" content="##Spring Boot项目上添加支付宝SDK
@@ -89,7 +89,7 @@ mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -D">
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -126,7 +126,7 @@ mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -D">
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/Spring-Boot-Gradle/" style="font-size: 10px;">Spring Boot, Gradle</a>
 					</div>
 				</section>
 				
@@ -235,6 +235,10 @@ mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -D">
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Boot-Gradle/">Spring Boot, Gradle</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -254,6 +258,7 @@ mvn install:install-file -DgroupId=?(eg:alipay) -DartifactId=?(eg:alipay) -D">
 </blockquote>
 <p>再执行gradle.bat cleanIdea idea重新导入依赖就可以将SDK成功导入项目中。</p>
 <p>以上注意的有：mvn本地仓库一般在用户目录下的.m2/repository下，在导入本地仓库成功后可以确认一下本地仓库是否已经有了对应生成的目录结构：repository\DgroupId\DartifactId\version，目录下是否有DgroupId-version.Dpackaging文件以及pom文件还有_rermote.repositories。如果存在则导入成功。再根据以上目录结构再在gradle里添加compile依赖。compile:”DgroupId:DartifactId:version”。以上即可成功导入。注意导入的SDK是编译好后的SDK，也就是.class文件，并非源码。</p>
+<p>本文参考：<a href="http://www.cnblogs.com/hyhnet/p/5775473.html" target="_blank" rel="external">【微框架】Maven +SpringBoot 集成 阿里大鱼 短信接口详解与Demo</a></p>
 
       
     </div>
